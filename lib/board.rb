@@ -24,16 +24,12 @@ class Board
   end
   
   def case_empty?(name)
-    array_9_cases.find {|board_case| board_case.id_case == name}.occupied_by=='vide'
+    array_9_cases.find {|board_case| board_case.id_case == name}.occupied_by=='⬜'
   end
   
-  def play_turn(player)
-    #TO DO : une méthode qui :
-    #1) demande au bon joueur ce qu'il souhaite faire
-    #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
-    
+  def play_turn(player)  
     board_print
-    
+    puts
     print "Saisir le choix d'une case libre [1..9] >"
     choice = gets.chomp
 		
@@ -65,7 +61,9 @@ class Board
       @array_9_cases[8].occupied_by = player.player_id      
 			@array_9_cases[8].value = player.value
     else
-			puts "saisie interdite/case pas libre"
+      puts
+			puts "⛔ saisie interdite/case pas libre ⛔"
+      puts
       play_turn(player)
     end
   end
@@ -87,10 +85,9 @@ class Board
 	def victory?
     #TO DO : une méthode qui vérifie le plateau et indique 
     #s'il y a un vainqueur ou match nul
-		binding.pry
+		# binding.pry
 		#if win_condition.include?(3) || win_condition.include?(6)
-		if (win_condition & [3,6]).any?
-			puts "la partie est finie, le joueur gagant est le #{@current_player}"
+		if (win_condition & [3,300]).any?
       return true
 		
     else

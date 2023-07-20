@@ -4,7 +4,7 @@ class BoardCase
   def initialize(string)
     @id_case = string
     @value = 0
-    @occupied_by = 'vide'
+    @occupied_by = '⬜'
   end
   
 end
