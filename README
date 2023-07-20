@@ -1,1 +1,14 @@
 #jeu du morpion
+
+Lancer "ruby app.rb" pour jouer à l'indémodable jeu du morpion.
+
+Deux joueurs s'affrontent pour aligner 3 caractères identiques dans une grille de largeur 3 par hauteur 3.
+
+La saisie clavier est un nombre de 1 à 9 représentant l'emplacement que le joueur souhaite prendre.
+-------------
+| 1 | 2 | 3 |
+-------------
+| 4 | 5 | 6 |
+-------------
+| 7 | 8 | 9 |
+-------------
